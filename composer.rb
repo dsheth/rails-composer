@@ -701,8 +701,8 @@ gem 'mongoid', '>= 3.0.18' if prefer :orm, 'mongoid'
 unless File.open('Gemfile').lines.any?{|line| line.include?('pg')}
   gem 'pg', '>= 0.14.1' if prefer :database, 'postgresql'
 end
-unless File.open('Gemfile').lines.any?{|line| line.include?('mysql2')}
-  gem 'mysql2', '>= 0.3.11' if prefer :database, 'mysql'
+unless File.open('Gemfile').lines.any?{|line| line.include?('jdbc-mysql')}
+  gem 'jdbc-mysql' if prefer :database, 'mysql'
 end
 
 ## Template Engine
